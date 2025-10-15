@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Practice</title>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Our HTML Sandbox" />
+    <meta name="keywords" content="HTML tags" />
+    <meta name="author" content="Leilani Rants" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!-- works like <a href="/index.html">Home</a> -->
+        <a href="/">Home</a>
+        <a href="form.html">Form</a>
+      </nav>
+    </header>
+
+    <main>
+      <h1>My HTML Learning Journey</h1>
+      <!--part III.7 content added III.1-6 nexted in article tag    -->
+      <article>
+        <h2>
+          Learning Elements: <code>div</code>, <code>span</code>,
+          <code>p</code>, <code>pre</code>, <code>ul</code>, <code>li</code>,
+          <code>ol</code>
+        </h2>
+        <!--part III.1  -->
+        <div>HTML</div>
+        <div>CSS</div>
+        <div>JavaScript</div>
+        <!--part III.2  -->
+        <span>Hello</span><span>world</span><span>!</span>
+        <!--part III.3  -->
+        <p>p represents paragraph without preserving spacing</p>
+        <pre>
+  Text in         a pre element
+  is displayed in a fixed-width
+  font, and it preserves
+  both      spaces and
+  line breaks
+</pre
+        >
+        <!--part III.4  -->
+        <ul>
+          <li>Item 1</li>
+          <li>Item 2</li>
+          <li>Item 3</li>
+          <li>Item 4</li>
+        </ul>
+        <!--part III.5  -->
+        <ol>
+          <li>First item</li>
+          <ol>
+            <!-- part III.6 Nested ordered list -->
+            <li>Subitem 1</li>
+            <li>Subitem 2</li>
+          </ol>
+          <li>Second item</li>
+          <li>Third item</li>
+        </ol>
+      </article>
+      <!--part IV tables-->
+      <article>
+        <h2>Tables</h2>
+        <table>
+          <thead>
+            <tr>
+              <th colspan="2">First header</th>
+              <th>Second header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>First cell - first row</td>
+              <td>Second cell - first row</td>
+              <td>Third cell - first row</td>
+            </tr>
+            <tr>
+              <td>First cell - second row</td>
+              <td>Second cell - second row</td>
+              <td rowspan="2">Third cell - second row</td>
+            </tr>
+            <tr>
+              <td>First cell - third row</td>
+              <td>Second cell - third row</td>
+            </tr>
+          </tbody>
+        </table>
+      </article>
+      <!--part V img,video,audio-->
+      <article>
+        <h2>HTML elements: img, video, audio</h2>
+        <img
+          src="https://picsum.photos/400/400"
+          alt="random stock photo on load"
+          width="300"
+          height="300"
+        />
+        <img
+          src="assets/html_lab_image.jpg"
+          alt="cloudy sunset with hill silhouette"
+          width="300"
+          height="300"
+        />
+        <video autoplay width="250">
+          <source src="assets/flower.webm" type="video/webm" />
+          Sorry, your browser doesn't support embedded videos.
+        </video>
+        <audio autoplay src="assets/t-rex-roar.mp3">
+          Your browser does not support the <code>audio</code> element.
+        </audio>
+      </article>
+    </main>
+
+    <footer>Copyright &copy; 2025</footer>
+  </body>
+</html>
