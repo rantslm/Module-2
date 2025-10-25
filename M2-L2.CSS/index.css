@@ -1,0 +1,122 @@
+/* I. Selectors */
+article {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid black;
+}
+
+.style-me1 {
+    color: red
+}
+#style-me2 {
+    color: blue;
+}
+.style-me3 {
+    color: purple;
+}
+.my-descendants-are-styled p {
+    background-color: red;
+}
+.my-children-are-styled > p {
+    background-color: lightgreen;
+}
+
+/* II. Box model and common properties */
+.box { 
+    margin: 10px 20px 30px 40px;
+    padding: 80px 30px;
+    background-color: lightpink;
+    width: 45vw;
+    height: 8vh !important;
+    border: 8px solid rgb(208, 227, 177);
+    border-radius: 10px;
+    box-sizing: content-box;
+    overflow: scroll;
+    scrollbar-color: white rgba(0, 0, 0, 0.2);
+    outline: 10px dotted lightblue;
+    background-image: url('assets/images/img1.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+/* III. Positioning */
+.position-sticky {
+    position: sticky;
+    left: 1;
+    top: 1;
+    background-color: rgba(138, 252, 233, 0.5);
+}
+.position-absolute {
+    position: absolute;
+    top: 0;
+    background-color: rgba(180, 122, 255, 0.5);
+}
+
+.position-relative {
+    position: relative;
+    right: 4px;
+    top: 10px;
+    background-color: rgb(255, 0, 238, 0.5);
+}
+
+/* IV. Styling text */
+.text-style {
+    color: rgb(151, 195, 199);
+    font-family:'Gill Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    font-style: italic;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: dotted underline;
+}
+/* V. Styling links */
+a, a:link {
+    color:rgb(0, 174, 255);
+    text-decoration: wavy underline;
+    font-family: 'Comic Sans MS', sans-serif;
+    font-size: 16px;
+    font-weight: 100;
+}
+a:hover {
+    color: rgb(13, 0, 128);
+    text-decoration: wavy underline;
+    font-weight: 400;
+}
+a:active { 
+    color: rgb(79, 22, 96);
+    text-decoration: solid underline;
+    font-weight: 700;
+    text-shadow: 1px 1px 2px gray;
+}
+a:focus { 
+    color: rgb(0, 255, 132);
+    text-decoration: double underline;
+    font-weight: 400;
+}
+a:visited {
+    color: rgb(8, 2, 41);
+    font-style:italic;
+    text-decoration: dashed underline;
+    font-weight: 300;
+}
+
+/* VI. calc() */
+.calc-style {
+    width: 100vw;
+    background-color: rgb(228, 115, 115);
+    width: calc(100vw - 100px);
+}
+.fixed-width-col {
+    width: 350px;
+    display: inline-block;
+    background-color: rgb(144, 238, 144);
+}
+.fluid-col {
+    display: inline-block;
+    width: calc(100% - 360px);
+    background-color: rgb(176, 224, 230);
+}
