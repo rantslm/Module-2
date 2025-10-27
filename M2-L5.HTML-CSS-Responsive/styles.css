@@ -1,0 +1,227 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 16px;
+  background-image: linear-gradient(
+    to bottom right,
+    skyblue,
+    rgb(208, 247, 184),
+    lightyellow,
+    aqua
+  );
+  margin: 0;
+  line-height: 1.6;
+  padding-top: 110px; /* creates space for the fixed top bar */
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+/* Top bar that holds name/title and contact info */
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.4); /* slight transparency */
+  backdrop-filter: blur(6px);
+  padding: 20px 40px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Left side: name + title */
+.name-title h1 {
+  font-size: 2.2em;
+  color: #333;
+  margin: 0;
+}
+
+.name-title h2 {
+  font-size: 1.2em;
+  color: #444;
+  margin: 0;
+}
+
+/* Right side: contact info */
+.contact {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  margin: 0;
+  padding: 20px 20px;
+}
+
+.contact li a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.contact li a:hover {
+  text-decoration: double underline;
+}
+.contact li a:active {
+    text-decoration: wavy underline;
+    text-shadow: 1px 1px 2px rgb(144, 144, 144);
+}
+.contact li a:visited {
+    color: purple;
+    text-decoration: underline;
+}
+
+h1 {
+  font-size: 2.5em; 
+  font-weight: bold;
+  line-height: 1.2;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  color: #333; 
+}
+
+h2 {
+  font-size: 1.2em;
+  font-weight: bold;
+  line-height: 1.3;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  color: #444;
+}
+
+h3 {
+  font-size: 1.5em; /* Or 24px */
+  font-weight: bold;
+  line-height: 1.4;
+  margin-top: 0.3em;
+  margin-bottom: 0.5em;
+  color: #555;
+}
+
+h4 {
+  font-size: 1.2em; /* Or 18px */
+  font-weight: bold;
+  line-height: 1.5;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  color: #666;
+}
+
+h5 {
+  font-size: 1em; 
+  font-weight: bold;
+  line-height: 1.6;
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+  color: #777;
+}
+ul {
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+}
+.flex-wrap > p {
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 30px;
+}
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    column-gap: 60px;
+    list-style-type: none;
+}
+.profile-photo { 
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+section {
+  margin-bottom: 60px;
+  padding-bottom: 30px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+}
+/* mobile header sticky instead of fixed */
+@media (max-width: 768px) {
+    .top-bar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        display: flex;
+        background: rgba(255,255,255,0.5);
+        backdrop-filter: blur(4px);
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 0.25rem;
+        padding: 6px 10px;
+        transition: transform 0.3s ease-in-out;
+        z-index: 1000;
+    }
+    body {
+        padding-top: 15px;
+        padding-left: 10px;
+        padding-right: 10px;
+        font-size: 14px;
+    }
+    .name-title h1{
+        font-size: 1.2em;
+        margin: 0;
+    }
+    .name-title h2 {
+        font-size: 0.9em;
+        margin: 0;
+    }
+    .profile-photo {
+        width: 35px;
+        height: 35px;
+        margin-top: 0.25rem;
+    }
+    h1 {
+        font-size: 1.4em;
+    }
+    h2 {
+        font-size: 1.1em;
+    }
+    h3 {
+        font-size: 1.1em;
+    }
+    h4 {
+    font-size: 1.0em;
+  }
+  h5 {
+    font-size: 0.9em;
+  }
+
+  p, li {
+    font-size: 0.9em;
+    line-height: 1.4;
+  }
+    .contact {
+        flex-direction:column;
+        align-items: center;
+        gap: 0.2rem;
+        font-size: 0.8em;
+        padding: 0;
+        margin: 0;
+    }
+    .contact li {
+        line-height: 1.2;
+        white-space: nowrap;
+    }
+    section {
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+    .flex-container {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+     main, section {
+    max-width: 100%;
+  }
+}
